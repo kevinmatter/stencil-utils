@@ -20,8 +20,11 @@ export default class extends Base
      * @param {Object} params
      * @param {Function} callback
      */
-    search(query, params, callback) {
-        const url = this.endpoint + encodeURIComponent(query);
+    search(query, ktype, params, callback) {
+        let url = this.endpoint + encodeURIComponent(query);
+        if ( ktype != null ) {
+          url = url + ktype;
+        }
         let paramsArg = params;
         let callbackArg = callback;
 
