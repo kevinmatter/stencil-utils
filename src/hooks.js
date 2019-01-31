@@ -5,6 +5,7 @@ import ProductHooks from './hooks/product';
 import SearchHooks from './hooks/search';
 import FacetedSearchHooks from './hooks/faceted-search';
 import SortByHooks from './hooks/sort-by';
+import ShowNumHooks from './hooks/show-num';
 
 const internals = {};
 
@@ -16,6 +17,7 @@ internals.classes = {
     search: new SearchHooks(),
     facetedSearch: new FacetedSearchHooks(),
     sortBy: new SortByHooks(),
+    showNum: new ShowNumHooks(),
 };
 
 internals.parseHooks = function (hookName) {
